@@ -85,7 +85,7 @@ document.addEventListener("DOMContentLoaded", function () {
   const userUsername = JSON.parse(document.getElementById("user_username").textContent);
 
   const chatSocket = new WebSocket(
-    "ws://" + window.location.host + "/ws/chat/" + roomName + "/"
+    "wss://" + window.location.host + "/ws/chat/" + roomName + "/"
   );
 
   chatSocket.onopen = function (e) {
