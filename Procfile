@@ -1,1 +1,1 @@
-web: python manage.py migrate && python manage.py collectstatic && gunicorn chat_app.wsgi
+web: daphne chat_app.asgi:application --port $PORT --bind 0.0.0.0 && python manage.py migrate && python manage.py collectstatic && gunicorn chat_app.wsgi
