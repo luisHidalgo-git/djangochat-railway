@@ -1,0 +1,38 @@
+nav {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 100px;
+    background-color: rgb(23, 104, 136);
+    padding: 0 20px; /* Espaciado interno */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Sombra para profundidad */
+}
+
+nav ul {
+    list-style-type: none;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+}
+
+nav ul li {
+    padding: 20px 15px; /* Espaciado horizontal y vertical */
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: white;
+    font-size: 24px; /* Tamaño de fuente más adecuado */
+    font-weight: bold; /* Cambiado a bold para mayor énfasis */
+    transition: color 0.3s ease; /* Transición suave para el hover */
+}
+
+nav ul li a:hover {
+    color: orange;
+    text-decoration: none;
+}
+
+h1 {
+    color: white;
+}

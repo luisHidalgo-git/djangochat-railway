@@ -1,0 +1,45 @@
+html, body {
+    height: 100%;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+}
+
+.content {
+    flex: 1; /* Permite que el contenido crezca según sea necesario */
+    margin: 20px;
+}
+
+footer {
+    width: 100%;
+    background-color: rgb(23, 104, 136);
+    padding: 20px;
+    text-align: center;
+    margin-top: auto; /* Permite que el footer se desplace según el contenido */
+}
+
+footer ul {
+    list-style-type: none;
+    display: flex;
+    justify-content: center;
+    padding: 0;
+    margin: 0;
+}
+
+footer ul li {
+    margin-right: 15px;
+}
+
+footer ul li a {
+    color: white;
+    text-decoration: none;
+}
+
+footer ul li a:hover {
+    text-decoration: none;
+    color: orange;
+}
+
+p {
+    color: rgb(255, 255, 255);
+}

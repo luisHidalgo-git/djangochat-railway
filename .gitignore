@@ -1,0 +1,13 @@
+env
+.sqlite3
+.DS_Store
+*.pyc
+.pyc
+venv
+__pycache__
+.vscode
+.env
+.env.local
+staticfiles/
+db.sqlite3
+tex.txt

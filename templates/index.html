@@ -1,0 +1,57 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Inicio</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="{% static 'css/index.css' %}">
+    <link rel="stylesheet" href="{% static 'css/footer.css' %}">
+    <link rel="stylesheet" href="{% static 'css/header.css' %}">
+</head>
+<body>
+    <header>
+        {% include 'header.html' %}
+    </header>
+    <div class="content">
+        <h2>Acerca de la Aplicación</h2>
+        <p>Este módulo permite comunicarse en tiempo real a través de una interfaz amigable. Las características incluyen:</p>
+        <ul>
+            <li>Mensajería en tiempo real</li>
+            <li>Estado de presencia de los usuarios (Online/Offline)</li>
+            <li>Confirmaciones de entrega y lectura de mensajes</li>
+            <li>Funcionalidad de búsqueda para mensajes</li>
+        </ul>
+
+        <video id="video" autoplay loop>
+            <source src="{% static 'videos/Demostracion.mp4' %}" type="video/mp4">
+        </video>
+
+        <h2>Tecnologías Utilizadas</h2>
+        <p>La aplicación está construida utilizando las siguientes tecnologías:</p>
+        <ul>
+            <li>Django para el backend</li>
+            <li>Autenticacion con Jason Web Token</li>
+            <li>Bootstrap para diseño responsivo</li>
+            <li>Base de Datos PostgreSQL</li>
+        </ul>
+
+        <h2>Cómo Usar</h2>
+        <p>Para comenzar:</p>
+        <ol>
+            <li>Clona el repositorio desde GitHub.</li>
+            <li>Agrega el entorno virtual <code>python -m venv venv && source venv/bin/activate</code>.</li>
+            <li>Instala las dependencias requeridas usando <code>pip install -r requirements.txt</code>.</li>
+            <li>Agregar las migraciones <code>python manage.py makemigrations && python manage.py migrate</code>.</li>
+            <li>Ejecuta la aplicación usando <code>python manage.py runserver</code>.</li>
+            <li>Accede a la aplicación en tu navegador web en <code>http://127.0.0.1:8000</code>.</li>
+        </ol>
+
+        <img src="{% static 'img/github.png' %}" alt="" id="github">
+    </div>
+
+    {% include 'footer.html' %}
+
+</body>
+</html>
