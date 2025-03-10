@@ -45,8 +45,12 @@ SECRET_KEY = 'django-insecure-fv@!-bs_yfk2!)c!8%$=qvhyxd)yfbo4z6cz&(eo@v6p2es7@6
 DEBUG = True
 
 ALLOWED_HOSTS = ['web-production-7815.up.railway.app']
-CSRF_TRUSTED_ORIGINS = ['https://*.up.railway.app']
-
+CSRF_TRUSTED_ORIGINS = [
+    "https://web-production-7815.up.railway.app",
+]
+CORS_ALLOWED_ORIGINS = [
+    "https://web-production-7815.up.railway.app",
+]
 
 # Application definition
 
@@ -60,6 +64,7 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'whitenoise.runserver_nostatic',
+    'corsheaders',
     'users',
     'chat',
 ]
@@ -68,6 +73,7 @@ MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
     "whitenoise.middleware.WhiteNoiseMiddleware",
     'django.contrib.sessions.middleware.SessionMiddleware',
+    'corsheaders.middleware.CorsMiddleware',
     'django.middleware.common.CommonMiddleware',
     'django.middleware.csrf.CsrfViewMiddleware',
     'django.contrib.auth.middleware.AuthenticationMiddleware',
